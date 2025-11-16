@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather & Forecast Assignment</title>
+    <link rel="stylesheet" href="sty.css">
+</head>
+
+<body>
+
+<header>
+    <div class="header-top">
+        <h1 class="app-title">Live Weather broadcasting</h1>
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
+    </div>
+
+    <div class="search-area">
+
+        <div class="search-container">
+            <input type="text" id="city-input" placeholder="Search city..." autocomplete="off">
+            <button id="search-btn">Search</button>
+            <!-- Auto Suggest -->
+            <div id="suggestions" class="suggestions"></div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Current Weather -->
+    <section id="current-weather">
+        <h2 class="section-title">current city weather</h2>
+        <div class="weather-card" id="weather-display">
+            <p class="placeholder">Search a city to see weather.</p>
+        </div>
+    </section>
+
+    <!-- 5-Day Forecast -->
+    <section id="forecast">
+        <h2 class="section-title">Weather Forecast</h2>
+        <div class="forecast-container" id="forecast-display"></div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2024 Weather App • Powered by OpenWeather</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

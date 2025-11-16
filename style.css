@@ -1,0 +1,221 @@
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: #eef3f8;
+    color: #1c1f26;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dark {
+    background: #1c1f26;
+    color: #e7e7e7;
+}
+
+/* HEADER */
+header {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #4a90e2, #357ABD);
+    color: #fff;
+}
+
+/* Top row: Title + Toggle */
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* center by default */
+    position: relative;
+}
+
+/* App title centered */
+.header-top .app-title {
+    font-size: 28px;
+    margin: 0;
+    align-items: center;
+}
+
+/* SEARCH AREA */
+.search-area {
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    align-items: center; /* Center toggle vertically */
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search-container {
+    position:relative;
+    align-items: center;
+}
+
+#city-input {
+    width: 250px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    color: #1c1f26;
+}
+
+#search-btn {
+    margin-top: 4px;
+    width: 250px;
+    padding: 10px 15px;
+    border: none;
+    background: #fff;
+    color: #357ABD;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: background 0.2s;
+}
+
+#search-btn:hover {
+    background: #e7f0ff;
+}
+
+/* SUGGESTIONS */
+.suggestions {
+    position: absolute;
+    top: 52px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 50;
+    overflow: hidden;
+}
+
+.suggest-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+    border-bottom: 1px solid #eee;
+    color: #1c1f26;
+}
+
+.suggest-item:hover {
+    background: #f0f6ff;
+}
+
+/* DARK MODE FOR SEARCH & SUGGESTIONS */
+.dark #city-input,
+.dark #search-btn {
+    background: #2a2e39;
+    color: #e7e7e7;
+}
+
+.dark .suggestions {
+    background: #2a2e39;
+}
+
+.dark .suggest-item {
+    color: #e7e7e7;
+    border-bottom: 1px solid #444;
+}
+
+.dark .suggest-item:hover {
+    background: #3a3f4d;
+}
+
+/* TOGGLE BUTTON */
+/* on the right */
+.header-top .theme-toggle {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    color: #357ABD;
+    border: none;
+    padding: 8px 8px;
+    margin-left: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    transition: background 0.3s, color 0.3s;
+}
+
+.dark .theme-toggle {
+    background: #2a2e39;
+    color: #fff;
+}
+
+/* TITLES */
+.section-title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#current-weather{
+    padding: 15px 15px;
+}
+
+/* CURRENT WEATHER CARD */
+.weather-card {
+    max-width: 520px;
+    margin: auto;
+    padding: 25px;
+    background: white;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: background 0.3s, color 0.3s;
+}
+
+.dark .weather-card {
+    background: #2a2e39;
+    color: #e7e7e7;
+}
+
+.weather-card img {
+    width: 100px;
+}
+
+/* FORECAST GRID */
+.forecast-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 0 10px;
+}
+
+.forecast-card {
+    padding: 18px;
+    border-radius: 14px;
+    background: white;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: background 0.3s, color 0.3s;
+}
+
+.dark .forecast-card {
+    background: #2a2e39;
+    color: #e7e7e7;
+}
+
+.forecast-card img {
+    width: 70px;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 40px;
+    background: #dde6f0;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    font-size: 14px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dark footer {
+    background: #2a2e39;
+    color: #e7e7e7;
+}
